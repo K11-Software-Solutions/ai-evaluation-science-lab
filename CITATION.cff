@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software or its articles, please cite it as below."
+type: software
+title: "AI Evaluation Science Lab"
+abstract: "How far can an AI evaluator be trusted? Reliability statistics beyond kappa, LLM-judge bias tests (position, verbosity, self-preference), sample sizes for judge validation and system comparison, drift monitoring with CUSUM, Goodhart effects, and a judge acceptance test in CI. No API key needed."
+authors:
+  - family-names: Jadhav
+    given-names: Kavita
+    affiliation: K11 Software Solutions
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # add your ORCID iD here and in .zenodo.json
+repository-code: "https://github.com/K11-Software-Solutions/ai-evaluation-science-lab"
+url: "https://github.com/K11-Software-Solutions/ai-evaluation-science-lab"
+version: "1.0.0"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - llm-as-judge
+  - evaluation
+  - inter-rater-reliability
+  - krippendorff-alpha
+  - ai-quality-engineering
+  - llm-evaluation
+  - measurement
+  - statistics
+  - judge-bias
+# After the first Zenodo release, add the concept DOI (it always resolves to the latest version):
+# identifiers:
+#   - type: doi
+#     value: "10.5281/zenodo.XXXXXXX"
+#     description: Concept DOI (all versions)

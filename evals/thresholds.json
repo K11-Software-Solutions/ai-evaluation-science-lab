@@ -1,0 +1,6 @@
+{
+  "_comment": "Judge acceptance thresholds. Agreement is compared with the human ceiling measured the same way, not with a fixed number. Bias checks require the 95% interval to be consistent with no bias.",
+  "max_alpha_shortfall": 0.05,
+  "max_pass_rate_gap": 0.08,
+  "min_consistency": 0.65
+}

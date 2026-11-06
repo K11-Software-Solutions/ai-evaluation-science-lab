@@ -1,0 +1,11 @@
+[project]
+name = "ai-evaluation-science-lab"
+version = "1.0.0"
+description = "Evaluation science for AI quality: rater reliability beyond kappa, LLM-judge biases, sample sizes for judge validation and system comparison, drift monitoring and Goodhart effects."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-ra"

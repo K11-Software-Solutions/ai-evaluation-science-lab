@@ -1,0 +1,275 @@
+{
+  "E1": {
+    "items": 4000,
+    "rows": [
+      {
+        "prevalence_of_fail": 0.5,
+        "rater_accuracy": 0.9,
+        "percent_agreement": 0.815,
+        "cohen_kappa": 0.63,
+        "krippendorff_alpha": 0.63,
+        "agreement_on_fails": 0.815,
+        "agreement_on_passes": 0.815
+      },
+      {
+        "prevalence_of_fail": 0.2,
+        "rater_accuracy": 0.9,
+        "percent_agreement": 0.824,
+        "cohen_kappa": 0.54,
+        "krippendorff_alpha": 0.541,
+        "agreement_on_fails": 0.66,
+        "agreement_on_passes": 0.881
+      },
+      {
+        "prevalence_of_fail": 0.05,
+        "rater_accuracy": 0.9,
+        "percent_agreement": 0.811,
+        "cohen_kappa": 0.22,
+        "krippendorff_alpha": 0.22,
+        "agreement_on_fails": 0.33,
+        "agreement_on_passes": 0.89
+      }
+    ]
+  },
+  "E2": {
+    "true_ranking": "alpha > beta > gamma > delta",
+    "systems": {
+      "alpha": {
+        "skill": 0.3,
+        "family": "family-x",
+        "verbosity": 1.0
+      },
+      "beta": {
+        "skill": 0.2,
+        "family": "family-y",
+        "verbosity": 1.0
+      },
+      "gamma": {
+        "skill": 0.0,
+        "family": "family-x",
+        "verbosity": 1.0
+      },
+      "delta": {
+        "skill": -0.2,
+        "family": "family-z",
+        "verbosity": 1.6
+      }
+    },
+    "rows": [
+      {
+        "judge": "fair, counterbalanced",
+        "ranking": "alpha > beta > gamma > delta",
+        "matches_truth": true,
+        "delta_win_share": 0.33,
+        "gamma_win_share": 0.46
+      },
+      {
+        "judge": "position-biased, fixed order",
+        "ranking": "alpha > beta > gamma > delta",
+        "matches_truth": true,
+        "delta_win_share": 0.46,
+        "gamma_win_share": 0.49
+      },
+      {
+        "judge": "position-biased, counterbalanced",
+        "ranking": "alpha > beta > gamma > delta",
+        "matches_truth": true,
+        "delta_win_share": 0.35,
+        "gamma_win_share": 0.47
+      },
+      {
+        "judge": "verbose-loving, counterbalanced",
+        "ranking": "alpha > beta > delta > gamma",
+        "matches_truth": false,
+        "delta_win_share": 0.46,
+        "gamma_win_share": 0.44
+      },
+      {
+        "judge": "self-preferring (family-x), counterbalanced",
+        "ranking": "alpha > gamma > beta > delta",
+        "matches_truth": false,
+        "delta_win_share": 0.26,
+        "gamma_win_share": 0.56
+      }
+    ]
+  },
+  "E3": {
+    "trials": 30,
+    "alpha_interval": [
+      {
+        "items": 24,
+        "alpha_ci_width": 0.181
+      },
+      {
+        "items": 50,
+        "alpha_ci_width": 0.099
+      },
+      {
+        "items": 100,
+        "alpha_ci_width": 0.08
+      },
+      {
+        "items": 200,
+        "alpha_ci_width": 0.052
+      },
+      {
+        "items": 400,
+        "alpha_ci_width": 0.039
+      }
+    ],
+    "system_comparison_power": [
+      {
+        "prompts": 25,
+        "fair_judge_detects_beta_over_gamma": 0.1,
+        "noisy_judge_detects_beta_over_gamma": 0.1
+      },
+      {
+        "prompts": 50,
+        "fair_judge_detects_beta_over_gamma": 0.27,
+        "noisy_judge_detects_beta_over_gamma": 0.2
+      },
+      {
+        "prompts": 100,
+        "fair_judge_detects_beta_over_gamma": 0.23,
+        "noisy_judge_detects_beta_over_gamma": 0.07
+      },
+      {
+        "prompts": 200,
+        "fair_judge_detects_beta_over_gamma": 0.5,
+        "noisy_judge_detects_beta_over_gamma": 0.13
+      },
+      {
+        "prompts": 400,
+        "fair_judge_detects_beta_over_gamma": 0.83,
+        "noisy_judge_detects_beta_over_gamma": 0.27
+      }
+    ]
+  },
+  "E4": {
+    "seeds": 200,
+    "days": 40,
+    "anchor_items": 100,
+    "rows": [
+      {
+        "change": "none (false alarms)",
+        "threshold_false_alarms": 0.0,
+        "threshold_detected": "-",
+        "threshold_mean_days": "-",
+        "cusum_false_alarms": 0.015,
+        "cusum_detected": "-",
+        "cusum_mean_days": "-"
+      },
+      {
+        "change": "gradual: +0.03 leniency/day from day 10",
+        "threshold_false_alarms": 0.0,
+        "threshold_detected": 1.0,
+        "threshold_mean_days": 8.4,
+        "cusum_false_alarms": 0.0,
+        "cusum_detected": 1.0,
+        "cusum_mean_days": 8.0
+      },
+      {
+        "change": "sudden: +0.10 on day 10",
+        "threshold_false_alarms": 0.0,
+        "threshold_detected": 0.15,
+        "threshold_mean_days": 14.6,
+        "cusum_false_alarms": 0.0,
+        "cusum_detected": 0.56,
+        "cusum_mean_days": 14.8
+      },
+      {
+        "change": "sudden: +0.15 on day 10",
+        "threshold_false_alarms": 0.0,
+        "threshold_detected": 0.43,
+        "threshold_mean_days": 11.0,
+        "cusum_false_alarms": 0.0,
+        "cusum_detected": 0.9,
+        "cusum_mean_days": 9.0
+      },
+      {
+        "change": "sudden: +0.20 on day 10",
+        "threshold_false_alarms": 0.0,
+        "threshold_detected": 0.77,
+        "threshold_mean_days": 8.5,
+        "cusum_false_alarms": 0.0,
+        "cusum_detected": 1.0,
+        "cusum_mean_days": 5.7
+      }
+    ]
+  },
+  "E5": {
+    "prompts": 400,
+    "rows": [
+      {
+        "selector": "fair judge",
+        "candidates": 1,
+        "true_quality": -0.045,
+        "judge_score": -0.029,
+        "length_tokens": 247
+      },
+      {
+        "selector": "fair judge",
+        "candidates": 2,
+        "true_quality": 0.216,
+        "judge_score": 0.202,
+        "length_tokens": 245
+      },
+      {
+        "selector": "fair judge",
+        "candidates": 4,
+        "true_quality": 0.401,
+        "judge_score": 0.397,
+        "length_tokens": 230
+      },
+      {
+        "selector": "fair judge",
+        "candidates": 8,
+        "true_quality": 0.564,
+        "judge_score": 0.585,
+        "length_tokens": 254
+      },
+      {
+        "selector": "fair judge",
+        "candidates": 16,
+        "true_quality": 0.71,
+        "judge_score": 0.712,
+        "length_tokens": 239
+      },
+      {
+        "selector": "verbose-loving judge",
+        "candidates": 1,
+        "true_quality": -0.045,
+        "judge_score": 0.089,
+        "length_tokens": 247
+      },
+      {
+        "selector": "verbose-loving judge",
+        "candidates": 2,
+        "true_quality": 0.201,
+        "judge_score": 0.356,
+        "length_tokens": 268
+      },
+      {
+        "selector": "verbose-loving judge",
+        "candidates": 4,
+        "true_quality": 0.34,
+        "judge_score": 0.594,
+        "length_tokens": 304
+      },
+      {
+        "selector": "verbose-loving judge",
+        "candidates": 8,
+        "true_quality": 0.505,
+        "judge_score": 0.858,
+        "length_tokens": 333
+      },
+      {
+        "selector": "verbose-loving judge",
+        "candidates": 16,
+        "true_quality": 0.595,
+        "judge_score": 1.034,
+        "length_tokens": 375
+      }
+    ]
+  }
+}

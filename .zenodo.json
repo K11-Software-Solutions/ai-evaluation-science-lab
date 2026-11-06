@@ -1,0 +1,24 @@
+{
+  "title": "AI Evaluation Science Lab",
+  "description": "How far can an AI evaluator be trusted? Reliability statistics beyond kappa, LLM-judge bias tests (position, verbosity, self-preference), sample sizes for judge validation and system comparison, drift monitoring with CUSUM, Goodhart effects, and a judge acceptance test in CI. No API key needed.",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Jadhav, Kavita",
+      "affiliation": "K11 Software Solutions"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "llm-as-judge",
+    "evaluation",
+    "inter-rater-reliability",
+    "krippendorff-alpha",
+    "ai-quality-engineering",
+    "llm-evaluation",
+    "measurement",
+    "statistics",
+    "judge-bias"
+  ],
+  "notes": "Code is licensed under MIT; the written material (articles/) is licensed under CC BY 4.0. The systems, raters, judges and data are simulated."
+}
